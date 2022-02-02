@@ -6,7 +6,6 @@
                 class="showCard"
                 v-if="!showTable"
                 :showCard="stateCard"
-                :text="stateText"
                 :users="users"
                 :stateModalCreateForm="stateModalCreateForm"
                 :stateModalEditForm="stateModalEditForm"
@@ -174,6 +173,8 @@ export default {
             }
         },
         resetForm(){
+            this.hasSelectYesSon = false;
+            this.hasSelectNotSon = false;
             this.hasSelectMale = false;
             this.hasSelectFemenine = false;
         },

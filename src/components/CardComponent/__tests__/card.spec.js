@@ -1,11 +1,23 @@
 import { shallowMount } from '@vue/test-utils';
 
 import ModalCreateForm from "../../ModalComponent/ModalCreateForm.vue";
-import ModalEditForm from "../../ModalComponent/ModalEditForm.vue"
-import CardItemComponent from "../../CardItemComponent/CardItem.vue"
+import ModalEditForm from "../../ModalComponent/ModalEditForm.vue";
+import CardItemComponent from "../../CardItemComponent/CardItem.vue";
 import CardComponent from "../Card.vue";
 
-import { mockUserObject } from './__mocks__/card.mocks';
+import { mockUserObject } from './__mocks__/card.mock.js';
+
+// const mockUserObject = {
+//     names: '',
+//     surnames: '',
+//     mail: '',
+//     cel: null,
+//     country: '',
+//     town: '',
+//     birth: '',
+//     gender: '',
+//     son: '',
+// };
 
 describe('sut card component', () => {
 
@@ -137,7 +149,7 @@ describe('sut card component', () => {
             expect(wrapper.vm.$emit('showModalEditForm')).toBeTruthy();
         });
 
-        it('should emit showModalEditForm', () => {
+        it('should emit unshiftUsers', () => {
             const mockArray = [];
             wrapper.vm.unshiftUsers(mockArray);
             expect(wrapper.vm.$emit('unshiftUsers')).toBeTruthy();

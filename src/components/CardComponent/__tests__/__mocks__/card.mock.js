@@ -8,4 +8,4 @@ export const mockUserObject = {
     birth: '',
     gender: '',
     son: '',
-}
+};

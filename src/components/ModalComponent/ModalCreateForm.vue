@@ -216,7 +216,7 @@ export default {
 
             if(this.dataForm.gender.length === 0){
                 this.genderError.state = true;
-                this.genderError.message = "Elija un opción";
+                this.genderError.message = "Elija un género";
                 amountError++
             }else{
                 this.genderError.state = false;
@@ -232,16 +232,16 @@ export default {
 
             if(Math.sign(this.dataForm.son) === -1){
                 this.sonAmountError.state = true;
-                this.sonAmountError.message = "No se permiten valores negativos"
-                amountError++
+                this.sonAmountError.message = "No se permiten valores negativos";
+                amountError++;
             }else {
                 this.sonAmountError.state = false;
             }
 
             if(Math.sign(this.dataForm.cel) === -1){
                 this.celAmountError.state = true;
-                this.celAmountError.message = "No se permiten valores negativos"
-                amountError++
+                this.celAmountError.message = "No se permiten valores negativos";
+                amountError++;
             }else {
                 this.celAmountError.state = false;
             }
@@ -372,7 +372,7 @@ export default {
     }
 
     .bg-select {
-        background: #6972A5;
+        background: var(--bg-btn-select);
     }
 
     .container__button:active{

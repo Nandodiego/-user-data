@@ -113,7 +113,7 @@ export default {
             if(this.dataForm.son.length === 0){
                 this.sonError.state = true;
                 this.sonError.message = "Elija una opción";
-                this.amountError++
+                this.amountError++;
             }else{
                 this.sonError.state = false;
                 this.amountError = 0;
@@ -122,29 +122,35 @@ export default {
             if(Math.sign(this.dataForm.son) === -1){
                 this.sonAmountError.state = true;
                 this.sonAmountError.message = "No se permiten valores negativos"
-                this.amountError++
+                this.amountError++;
             }else{
                 this.sonAmountError.state = false;
-                this.amountError = 0;
             }
 
             if(this.amountError === 0){
                 this.$emit('editUsers', this.dataForm);
                 this.$emit("showModalEdit", !this.modalEditForm);
                 this.resetForm();
+                this.resetFormErrors();
             }
-            console.log(this.amountError)
         },
         resetForm(){
             this.$emit('resetForm');
         },
+        resetFormErrors(){           
+            this.sonAmountError.state = false;
+        },
         closeModal(event){
             if(event.target.className === "section"){
                 this.$emit("showModalEdit", !this.modalEditForm);
+                this.resetForm();
+                this.resetFormErrors();
             }
         },
         closeModalX(){
             this.$emit("showModalEdit", !this.modalEditForm);
+            this.resetForm();
+            this.resetFormErrors();
         },
     }
 };
@@ -234,8 +240,16 @@ export default {
     }
 
     .bg-select {
-        background: #6972A5;
+        background: var(--bg-btn-select);
     }
+
+    
+    .texts_errors{
+        font-family: var(--font);
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
 
     @media(min-width: 1400px){
         .section {

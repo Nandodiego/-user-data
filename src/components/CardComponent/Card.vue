@@ -26,10 +26,6 @@
             :showAmountSon="amountSonCreate"
             :stateNotSon="stateNotSon"
             :dataForm="dataForm"
-            :bgMale="bgMale"
-            :bgFemenine="bgFemenine"
-            :bgYesSon="bgYesSon"
-            :bgNotSon="bgNotSon"
             @showAmountSonCreate="showAmountCreate()"
             @showModalCreate="showModalCreate()"          
             @addUsers="userData($event)"
@@ -95,18 +91,6 @@ export default {
         dataFormEdit: {
             type: Object
         },
-        bgMale: {
-            type: String
-        },
-        bgFemenine: {
-            type: String
-        },
-        bgYesSon: {
-            type: String
-        },
-        bgNotSon: {
-            type: String
-        },
         hasSelectMale: {
             type: Boolean
         },
@@ -149,27 +133,6 @@ export default {
         },
         deleteCard(id){
             this.$emit('deleteItem', id);
-        },
-        bgYesAndNotSon(){
-            this.$emit('bgYesAndNotSon')
-        },
-        bgMaleAndFemenine(){
-            this.$emit('bgMaleAndFemenine')
-        },
-        bgFemenineAndMale(){
-            this.$emit('bgFemenineAndMale')
-        },
-        resetBackgrounds(){
-            this.$emit('resetBackgrounds')
-        },
-        dataFormNotSon(){
-            this.$emit('dataFormNotSon');
-        },
-        dataFormGenderMale(){
-            this.$emit('dataFormGenderMale')
-        },
-        dataFormGenderFemenine(){
-            this.$emit('dataFormGenderFemenine')
         },
         notShowAmountSon(){
             this.$emit('notShowAmountSon');

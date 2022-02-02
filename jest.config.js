@@ -7,5 +7,6 @@ module.exports = {
     "js",
     "vue"
   ],
+  "modulePathIgnorePatterns": ["__mocks__"],
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec).[jt]s?(x)'],
 }

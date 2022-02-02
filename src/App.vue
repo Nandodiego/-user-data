@@ -34,6 +34,7 @@ export default {
         --bg-btn-delete: #EC3535;
         --bg-btn-edit: #5257CE;
         --bg-btn-showMore: #71C97A;
+        --bg-btn-select: #6972A5;
         --border-inputs: 1px solid #110F0F;
         --border-table: 1px solid #356E87;
         --color-title: #FFFFFF;
