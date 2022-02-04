@@ -393,8 +393,8 @@ export default {
     }
 
     @media(min-width: 1400px){
-        .section {
-            height: 100%;
+        .section{ 
+            min-height: 100vh;
         }
 
          .section__form{
